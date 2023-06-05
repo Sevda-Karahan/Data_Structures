@@ -25,9 +25,11 @@ Ortak sayı: 3
 
 3.çarktaki konumu: 6
 
+
 2.çark Saat yönünde 3 adım çevrilmeli (Not: Saatin ters yönünde de 3 adım çevrilebilir.)
 
 3.çark Saatin ters yönünde 2 adım çevrilmeli
+
 
 Çarkların son hali:
 1.çark: -> 15 -> 4 -> 2  -> 3 -> 1 -> 7  ->
