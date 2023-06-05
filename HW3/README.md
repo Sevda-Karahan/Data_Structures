@@ -63,3 +63,21 @@ Dönem-2: Course-2
 Dönem-3: Course-4
 
 Dönem-4: Course-5
+
+PROGRAM ÇIKTILARIM
+
+1) İlk olarak sorunun verildiği pdf’deki örneğin çıktısını paylaşmak istiyorum. (N=5)
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/c83a663e-0dfa-4b01-ace6-c85bbed299f3)
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/cb827996-f241-4fe9-b73b-8b58214e03a2)
+
+2) N = 6
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/87764345-ad33-40f7-ae78-003ecdd3f337)
+
+Burada 6 dersin ön koşul durumlarını belirten bri graf için komşuluk matrisi:
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/e7e280fb-32c1-4889-8448-988de546dc9d)
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/c3cafa93-f334-408c-956c-6f7e40102dfe)
