@@ -12,7 +12,7 @@ typedef struct TrieNode{
 	char *word;
 	char digit;
 	int isEndOfWord;
-	struct TrieNode *child[10]; // 0-9 arası 10 düğüm
+	struct TrieNode *child[10]; // 0-9 arasÄ± 10 dÃ¼ÄŸÃ¼m
 } TrieNode;
 
 TrieNode* createNode();
@@ -22,10 +22,10 @@ void freeTrie(TrieNode* root);
 
 int main() {
 	
-	// Keypad yapısını tanımlama
+	// Keypad yapÄ±sÄ±nÄ± tanÄ±mlama
 	struct Keypad keypad[] = {
         {'0', "#"},
-        {'1', "ÇĞÜŞ"},
+        {'1', "Ã‡ÄÃœÅ¢"},
         {'2', "ABC"},
         {'3', "DEF"},
         {'4', "GHI"},
@@ -36,7 +36,7 @@ int main() {
         {'9', "WXYZ"}
     };
     
-	// Sözlüğe ait dosyayı oku ve Trie'ye kelime ekle
+	// SÃ¶zlÃ¼ÄŸe ait dosyayÄ± oku ve Trie'ye kelime ekle
     TrieNode *root = createNode();
 
     FILE* dictionaryFile = fopen("dictionary.txt", "r");
@@ -50,7 +50,7 @@ int main() {
     }
     fclose(dictionaryFile);
 	
-	// Sorgu için sayıyı al ve kelime karşılıklarını yazdır
+	// Sorgu iÃ§in sayÄ±yÄ± al ve kelime karakterlerini yazdÄ±r
 	printf("\n> Sayi girin veya cikmak icin 'q' yaziniz.\n");
 	char input[MAX_WORD_LENGTH];
 	do{
@@ -83,12 +83,12 @@ void insertWords(TrieNode *root, const char *word, struct Keypad *keypad) {
 	int length = strlen(word);
 	TrieNode *currentNode = root;
 	
-	//Kelimenin uzunluğunda dönerek, sırasıyla her bir harfe karşılık gelen sayıyı buluyoruz.
+	//Kelimenin uzunluÄŸunda dÃ¶nerek, sÄ±rasÄ±yla her bir harfe karÅŸÄ±lÄ±k gelen sayÄ±yÄ± buluyoruz.
 	for (i = 0; i < length; i++) {
 	    currentLetter = word[i];
 	    found = 0;
 	    
-	    // Harfin hangi sayıya karşılık geldiğini bulma
+	    // Harfin hangi sayÄ±ya karÅŸÄ±lÄ±k geldiÄŸini bulma
 	    j = 0;
 	    while (j < 10 && found == 0) {
 	        int lettersLength = strlen(keypad[j].letters);
@@ -96,7 +96,7 @@ void insertWords(TrieNode *root, const char *word, struct Keypad *keypad) {
 	        k = 0;
 	        while ((k < lettersLength) && (keypad[j].letters[k] != toupper(currentLetter)))
 	            k++;
-	        //Burada keypad'deki harfler büyük harf şeklinde yazıldığından, sözlükteki küçük veya büyük harfin keypad'deki sayı karşılığını bulurken sıkıntı olmaması için:
+	        //Burada keypad'deki harfler bÃ¼yÃ¼k harf Å£eklinde yazÄ±ldÄ±ÄŸÄ±ndan, sÃ¶zlÃ¼kteki kÃ¼Ã§Ã¼k veya bÃ¼yÃ¼k harfin keypad'deki sayÄ± karÅŸÄ±lÄ±klarÄ± bulurken sÄ±kÄ±ntÄ± olmamasÄ± iÃ§in:
             if (k < lettersLength) {
                 currentDigit = keypad[j].digit;
                 found = 1;
@@ -105,25 +105,25 @@ void insertWords(TrieNode *root, const char *word, struct Keypad *keypad) {
 	    }
 	    //printf("%c", currentDigit);
 	    // INSERTION
-	    // Yeni düğüm oluşturma gerekiyorsa
+	    // Yeni dÃ¼ÄŸÃ¼m oluÅŸturma gerekiyorsa
         if (currentNode->child[currentDigit - '0'] == NULL) {
             currentNode->child[currentDigit - '0'] = createNode();
         }
         
-        // Düğümü güncelle
+        // DÃ¼ÄŸÃ¼mÃ¼ gÃ¼ncelle
         currentNode = currentNode->child[currentDigit - '0'];
         
         currentNode->digit = currentDigit;
 	}
 	
-	// Kelime sonunu işaretle ve kelimeyi düğüme ata
+	// Kelime sonunu iÅ£aretle ve kelimeyi dÃ¼ÄŸÃ¼me ata
     if(currentNode->word == NULL) {
     	currentNode->isEndOfWord = 1;
     	currentNode->word = malloc((strlen(word) + 1) * sizeof(char));
     	strcpy(currentNode->word, word);
 	} 
 	else {
-        // Aynı sayıya denk gelen diğer kelimeler için olduğu için '#' değerinde bir düğüm ekle
+        // AynÄ± sayÄ±ya denk gelen diÄŸer kelimeler iÃ§in iÃ§in '#' deÄŸerinde bir dÃ¼ÄŸÃ¼m ekle
         while (currentNode->child[0] != NULL) {
             currentNode = currentNode->child[0];
         }
@@ -148,7 +148,7 @@ void searchWords(TrieNode* root, const char* number) {
         }
         currentNode = currentNode->child[digit];
     }
-	// tur ve turk örneği
+	// tur ve turk Ã¶rneÄŸi
     if (currentNode->isEndOfWord) {
         printf("%s\n", currentNode->word);
         TrieNode* zeroNode = currentNode->child[0];
