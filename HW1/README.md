@@ -40,3 +40,26 @@ Ortak sayı: 3
 
 PROGRAM ÇIKTILARIM
 
+1) Programı iki defa M = 3, N = 5 girerek çalıştırdım. 
+Çıktılar : 
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/6821c997-555a-4f30-ad7f-7b001ccb7719)
+
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/44815e61-6b23-4c0b-831d-756e31a4107b)
+
+2) Programı iki defa M = 3, N = 20 girerek çalıştırdım. 
+Çıktılar : 
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/49419fbf-c04d-4ce8-bf06-23181fbe74f2)
+
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/99f27f9a-9800-4f5e-8d03-145c825f3a43)
+
+3) Programı iki defa M = 7, N = 30 girerek çalıştırdım. 
+Çıktılar : 
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/66b3a74d-7d51-4b6a-b4b1-4d9abe921b38)
+
+
+![image](https://github.com/Sevda-Karahan/Data_Structures/assets/116480291/27cd0190-bb07-4436-a30a-a5de4141e073)
